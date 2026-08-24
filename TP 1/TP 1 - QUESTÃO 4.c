@@ -1,15 +1,21 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 void inverter (char *string){
-int inicio = 0;
-int fim = strlen(string)-1;
+  int inicio = 0;
+  int fim = 0;
 
+while (string[fim] != '\0') {
+        fim++;
+}
+
+fim--; 
+
+  
 while (inicio < fim) {
-char temp = string[inicio];
-string[inicio] = string[fim];
-string[fim] = temp;
+   char temp = string[inicio];
+   string[inicio] = string[fim];
+   string[fim] = temp;
 
 inicio++;
 fim--;
@@ -26,5 +32,5 @@ inverter(palavra);
 printf("%s", palavra);
 
 return 0;
-
 }
+
